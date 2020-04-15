@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jmeter-grafana
+spec:
+  rules:
+    - host: jmeter-grafana
+      http:
+        paths:
+          - backend:
+              serviceName: jmeter-grafana
+              servicePort: 3000

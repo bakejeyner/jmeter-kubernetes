@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jmeter-master
@@ -27,6 +27,6 @@ spec:
         ports:
         - containerPort: 60000
       volumes:
-      - name: loadtest 
+      - name: loadtest
         configMap:
          name: jmeter-load-test

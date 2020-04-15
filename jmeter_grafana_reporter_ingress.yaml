@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jmeter-reporter
+spec:
+  rules:
+    - host: jmeter-reporter
+      http:
+        paths:
+          - backend:
+              serviceName: jmeter-reporter
+              servicePort: 8686
